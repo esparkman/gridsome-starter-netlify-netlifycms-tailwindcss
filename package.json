@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint -c .eslintrc.js src/**/*.vue"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.3.0",
@@ -13,6 +14,9 @@
     "netlify-cms": "^2.8.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.2.1"
+    "@gridsome/transformer-remark": "^0.2.1",
+    "eslint": "^5.15.3",
+    "eslint-plugin-gridsome": "^1.1.1",
+    "vue-eslint-parser": "^6.0.3"
   }
 }
