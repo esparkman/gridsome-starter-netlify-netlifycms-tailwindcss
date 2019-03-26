@@ -12,22 +12,22 @@
 </template>
 
 <page-query>
-  query Home ($page: Int) {
-    allPost (perPage: 10, page: $page) @paginate {
-      pageInfo {
-        totalPages
-        currentPage
-      }
-      edges {
-        node {
-          _id
-          title
-          path
-          excerpt
-        }
+query Home($page: Int) {
+  allPost(perPage: 10, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
+    edges {
+      node {
+        _id
+        title
+        path
+        excerpt
       }
     }
   }
+}
 </page-query>
 
 <script>

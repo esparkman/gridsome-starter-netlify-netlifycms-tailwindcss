@@ -6,8 +6,8 @@
 </template>
 
 <page-query>
-query Post ($path: String!) {
-  post (path: $path) {
+query Post($path: String!) {
+  post(path: $path) {
     title
     content
   }
