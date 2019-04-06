@@ -17,7 +17,7 @@
     "@gridsome/transformer-remark": "^0.2.1",
     "eslint": "^5.15.3",
     "eslint-plugin-gridsome": "^1.1.1",
-    "vue-eslint-parser": "^6.0.3"
+    "vue-eslint-parser": "^6.0.3",
     "gridsome-plugin-tailwind": "^0.0.2"
   }
 }
