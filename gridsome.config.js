@@ -20,6 +20,12 @@ module.exports = {
   },
   plugins: [
     {
+      use: 'gridsome-plugin-tailwind',
+      options: {
+        config: './tailwind.config.js'
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'posts/**/*.md',
