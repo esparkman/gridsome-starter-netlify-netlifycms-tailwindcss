@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.markdown ul li {
+  list-style-type: disc;
+}
