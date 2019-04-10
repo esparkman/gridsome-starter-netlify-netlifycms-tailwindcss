@@ -36,7 +36,15 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'posts/**/*.md',
-        typeName: 'Post'
+        typeName: 'Post',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
+            route: '/tag/:id',
+            create: true
+          }
+        }
       }
     },
 		{

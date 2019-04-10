@@ -20,7 +20,7 @@
     <div class="py-4">
       <div class="post-tags">
         <g-link v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{{ tag }}</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{{ tag.title }}</span>
         </g-link>
       </div>
     </div>
@@ -34,7 +34,11 @@ query Post($path: String!) {
     path
     date (format: "MMM D YYYY")
     timeToRead
-    tags
+    tags {
+      id
+      title
+      path
+    }
     content
     coverImage (height: 320, quality: 100)
   }
