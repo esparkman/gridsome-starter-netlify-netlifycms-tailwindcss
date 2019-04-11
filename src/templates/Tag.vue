@@ -1,9 +1,8 @@
 <template>
   <Layout>
-    <h1 class="tag-title text-center space-bottom">
-      # {{ $page.tag.title }}
+    <h1 class="text-center text-xl font-semibold">
+      #{{ $page.tag.title }}
     </h1>
-    <Pager :info="$page.posts.pageInfo" />
     <div class="max-w rounded overflow-hidden shadow-lg mt-8"  v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id">
       <g-link :to="edge.node.path">
         <img :src="edge.node.coverImage" class="w-full h-48 object-cover" alt="Cover" />
@@ -41,11 +40,16 @@
             ...on Post {
               title
               path
-              date (format: "D. MMMM YYYY")
+              date (format: "MMM D YYYY")
               timeToRead
-              description
+              excerpt
               coverImage (width: 860, blur: 10)
               content
+              tags {
+                id
+                title
+                path
+              }
             }
           }
         }
@@ -55,15 +59,7 @@
 </page-query>
 
 <script>
-import { Pager } from 'gridsome'
-export default {
-  components: {
-    Pager
-  },
-  metaInfo: {
-    title: this.$page.tag.title
-  }
-}
+export default { }
 </script>
 
 <style>

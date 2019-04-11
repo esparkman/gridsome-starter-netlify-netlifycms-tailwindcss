@@ -13,7 +13,7 @@
             Posted {{ post.node.date }}
             <template v-if="post.node.timeToRead">
               <strong>{{ post.node.timeToRead }} min read.</strong>  
-            </template>  
+            </template>
           </div>
         </div>
       </g-link>
