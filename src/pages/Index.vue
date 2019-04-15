@@ -3,7 +3,7 @@
     <Pager :info="$page.posts.pageInfo" />
     <div class="max-w rounded overflow-hidden shadow-lg mt-8"  v-for="post in $page.posts.edges" :key="post.id">
       <g-link :to="post.node.path">
-        <img :src="post.node.coverImage" class="w-full h-48 object-cover" alt="Cover" />
+        <img v-if="post.node.coverImage" :src="post.node.coverImage" class="w-full h-48 object-cover" alt="Cover" />
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">{{post.node.title}}</div>
           <p class="text-gray-700 text-base">
