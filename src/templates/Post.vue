@@ -71,10 +71,10 @@ export default {}
     @apply leading-tight text-lg font-bold text-black mt-8 -mb-2;
   }
   & code {
-    @apply font-mono text-sm inline bg-gray-100 px-1;
+    @apply font-mono text-sm inline px-1;
   }
   & pre code {
-    @apply block bg-black p-4 rounded;
+    @apply block p-4 rounded;
   }
   & blockquote {
     @apply border-l-4 border-gray-100 pl-4 italic;

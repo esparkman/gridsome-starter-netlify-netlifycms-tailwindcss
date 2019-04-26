@@ -23,7 +23,7 @@ With **Gridsome** you get a **universal GraphQL layer** for all your connected d
 Here is an example on how to query posts from the GraphQL layer in a page:
 
 
-```javascript
+```vue-html
   <template>
     <Layout>
       <h2>Latest blog posts</h2>
