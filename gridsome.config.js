@@ -21,7 +21,7 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        ['gridsome-plugin-remark-shiki', { skipInline: true }]
+        ['gridsome-plugin-remark-shiki', { skipInline: true, theme: 'min-dark' }]
       ]
     }
   },
